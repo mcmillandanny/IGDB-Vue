@@ -3,6 +3,7 @@
 console.log('Main JS');
 
 var srchBar = document.querySelector('.search');
+var IGN_KEY = "beffb04225b4429d9c9a8c5342937845";
 
 var app = new Vue({
 	el: "#search-app",

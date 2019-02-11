@@ -1,13 +1,14 @@
 console.log('Main JS');
 
 let srchBar = document.querySelector('.search');
+let IGN_KEY = "beffb04225b4429d9c9a8c5342937845";
 
 var app = new Vue({
 	el: "#search-app",
 	data: {
 		userSearch: "",
 		searchedGames: [],
-		isOpen: false
+		isOpen: false,
 	},
 	methods: {
 		searchGames: function() {
