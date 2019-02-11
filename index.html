@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>IGDB</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+		<link rel="stylesheet" href="dist/css/main.css">
+	</head>
+	<body>
+		<header>
+			<div id="search-app" class="header-bar">
+				<input  v-on:keyup.enter="searchGames" v-model="userSearch" name="search-bar" placeholder="Find a game" class="search">
+				<button v-on:click="searchGames" class="search-button">Search</button>
+				<div v-bind:class="{popupBox: true, popupBoxVisible: isOpen}">
+					<button class="close-button" v-on:click="isOpen = !isOpen">Close</button>
+					<game-search  class="game-search" v-bind:searched-games="searchedGames"></game-search>	
+				</div>
+			</div>
+		</header>
+		<div class="page-wrap">
+			<section class="hero">
+				<h1 class="h1-hero">Welcome to the Internet Game Database</h1>
+				<h2><span class="hero-line-ani">Popular </span>Games Right now</h2>
+			</section>
+			<popular-titles id="popular-games-app" v-bind:game-titles="popularTitles"></popular-titles>
+		<div id="random-games-app">
+			<button v-on:click="getdata">Search For Random Game</button>
+			<game-feed v-bind:game-data="gameData"></game-feed>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="dist/js/searchedGamesComponent.js"></script>
+		<script src="dist/js/main.js"></script>
+		<script src="dist/js/showPopularTitlesComponent.js"></script>
+		<script src="dist/js/popular-games.js"></script>
+		<script src="dist/js/genreFeed.js"></script>
+		<script src="dist/js/GameFeedComponent.js"></script>
+		<script src="dist/js/random-game.js"></script>	
+	</body>
+</html>

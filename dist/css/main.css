@@ -1,0 +1,228 @@
+/* 
+==============================================
+AUTHOR:		Danny McMillan
+==============================================
+
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+}
+
+/* 2. Content ================================= */
+header .header-bar {
+	background-color: #232930;
+	width: 100%;
+	height: 50px;
+}
+
+header .header-bar input {
+	margin: 15px 0 0 10%;
+	border-radius: 5px;
+	outline: none;
+}
+
+header .header-bar .popupBox {
+	width: 800px;
+	height: 350px;
+	background: #232930;
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 10;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 2px 5px 12px rgba(0, 0, 0, 0.75);
+}
+
+header .header-bar .popupBox h1 {
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 30px;
+	border-bottom: 1px solid white;
+	padding-bottom: 10px;
+}
+
+header .header-bar .popupBox img {
+	padding: 20px;
+	margin-left: 25%;
+	width: 50%;
+}
+
+header .header-bar .popupBox {
+	display: none;
+}
+
+header .header-bar .popupBoxVisible {
+	display: block;
+}
+
+header .header-bar .close-button {
+	float: right;
+	padding: 5px;
+	z-index: 10;
+}
+
+section {
+	z-index: 0;
+}
+
+.hero {
+	height: 80px;
+	margin-left: 10px;
+}
+
+.hero h1 {
+	text-transform: uppercase;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	font-size: 22px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-family: "Roboto", sans-serif;
+	z-index: -10;
+}
+
+.hero h1 .h1-hero {
+	z-index: -10;
+}
+
+.hero h2 {
+	text-transform: uppercase;
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-family: "Roboto", sans-serif;
+}
+
+.hero .hero-line-ani {
+	border-bottom: 1.5px #f1c40f solid;
+	padding: .5px;
+}
+
+#popular-games-app {
+	width: 100%;
+	overflow-x: scroll;
+	z-index: -10;
+}
+
+#popular-games-app .popular-games-wrapper {
+	display: flex;
+	flex-direction: row;
+	width: 220%;
+}
+
+#popular-games-app .popular-games-wrapper div {
+	width: 10%;
+	z-index: -1;
+}
+
+#popular-games-app .popular-games-wrapper div img {
+	width: 100%;
+}
+
+#popular-games-app .popular-games-wrapper .game-info-card {
+	font-size: 14px;
+	min-height: 50px;
+	font-family: "Poppins", sans-serif;
+	margin-bottom: 2px;
+	margin-top: 10px;
+	color: #232930;
+}
+
+#random-games-app {
+	z-index: -11;
+}
+
+#random-games-app button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	outline: none;
+	background: #232930;
+	color: white;
+	padding: 10px;
+}
+
+#random-games-app h1 {
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: "Roboto", sans-serif;
+}
+
+#random-games-app p {
+	font-style: italic;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	margin-bottom: 10px;
+}
+
+#random-games-app img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+/*# sourceMappingURL=main.css.map */

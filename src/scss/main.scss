@@ -1,0 +1,218 @@
+/* 
+==============================================
+AUTHOR:		Danny McMillan
+==============================================
+
+*/
+
+/* 0. Reset ================================= */
+@import 'reset';
+$primary-color: #21968f;
+$secondary-color: #76d26d;
+$accent-color: #903586;
+$font-1: 'Roboto', sans-serif;
+$font-2: 'Poppins', sans-serif;;
+$main-color: #232930;
+$accent-color: #f1c40f;
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+}
+
+
+
+/* 2. Content ================================= */
+
+header {
+
+	.header-bar {
+		background-color: $main-color;
+		width: 100%;
+		height: 50px;
+
+		input {
+			margin: 15px 0 0 10%;
+			border-radius: 5px;
+			outline: none;
+		}
+
+		button {
+		}
+		.popupBox { 
+			width: 800px;
+			height: 350px;
+			background: $main-color;
+			margin-top: 90px;
+			margin-left: auto;
+    		margin-right: auto;
+    		z-index: 10;
+    		-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+			box-shadow: 2px 2px 5px 12px rgba(0,0,0,0.75);
+
+    		h1 {
+    			color: white;	
+    			text-align: center;
+    			padding-top: 20px;
+    			font-size: 30px;
+    			border-bottom: 1px solid white;
+    			padding-bottom: 10px;
+    		}
+
+    		img {
+    			padding: 20px;
+    			margin-left: 25%;
+    			width: 50%;
+	    		
+    		}
+    		    		
+		}
+
+		.popupBox {
+			display: none;
+		}
+
+		.popupBoxVisible {
+			display: block;
+		}
+
+		.close-button {
+			float: right;
+			padding: 5px;
+			z-index: 10;
+		}
+
+	
+	}
+}
+
+section {
+	z-index: 0;
+}
+.hero {
+	height: 80px;
+	margin-left: 10px;
+
+	
+
+	h1 {
+		text-transform: uppercase;
+		margin-top: 2%;
+		margin-bottom: 1%;
+		font-size: 22px;
+		letter-spacing: 1px;
+		font-weight: 700;
+		font-family: $font-1;
+		z-index: -10;
+
+		.h1-hero {
+			z-index: -10;
+		}
+
+	}
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 17px;
+		letter-spacing: 1px;
+		font-weight: 700;
+		font-family: $font-1;
+	}
+
+	.hero-line-ani {
+		border-bottom: 1.5px $accent-color solid;
+		padding: .5px;
+		
+	}
+}
+
+#popular-games-app {
+	width: 100%;
+	overflow-x: scroll;
+	z-index: -10;
+
+	.popular-games-wrapper {
+		display: flex;
+		flex-direction: row;
+		width: 22% * 10; // each game is 25% of window width, and there are 10 games
+		div {
+			width: 10%;
+			z-index: -1;
+			img {
+				width: 100%;
+			
+			}
+		}
+
+		// .slideshow {
+		// 	position: relative;
+		// 	width: 10000px;
+		// 	height: 100%;
+		// 	overflow: scroll;
+
+		// 	.slide {
+				
+		// 	}
+		
+
+			.game-info-card {
+				font-size: 14px;;
+				min-height: 50px;
+				font-family: $font-2;
+				margin-bottom: 2px;
+				margin-top: 10px;
+				color: $main-color;
+				
+			}
+		// }
+	}
+}
+
+
+
+#random-games-app {
+	z-index: -11;
+	button {
+		display: block;
+		margin-left: auto;
+    	margin-right: auto;
+		margin-bottom: 10px;
+		outline: none;
+		background: $main-color;
+		color: white;
+		padding: 10px;
+	}
+
+	h1 {
+		text-align: center;
+		margin-bottom: 10px;
+		font-family: $font-1;
+	}
+	p {
+		font-style: italic;
+		text-align: center;
+		font-family: $font-2;
+		margin-bottom: 10px;
+	}
+
+	img {
+		display: block;
+		margin-left: auto;
+    	margin-right: auto;
+    	width: 50%;
+
+	}
+}
+
+
+
+
+
+
+
