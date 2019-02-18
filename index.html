@@ -5,7 +5,8 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title>IGDB</title>
 		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/main.css">
@@ -13,12 +14,12 @@
 	<body>
 		<header>
 			<div id="search-app" class="header-bar">
-
+				<h1><span>I</span>nternet<span>G</span>ame<span>D</span>ata<span>B</span>ase</h1>
 				<input  v-on:keyup.enter="searchGames" v-model="userSearch" name="search-bar" placeholder="Find a game" type="search" class="search">
 				<!-- <button v-on:click="searchGames" class="search-button">Search</button> -->
 				<div v-bind:class="{popupBox: true, popupBoxVisible: isOpen}">
-					<button class="close-button" v-on:click="isOpen = !isOpen">Close</button>
-					<game-search  class="game-search" v-bind:searched-games="searchedGames"></game-search>	
+					<button class="btn close-button" v-on:click="isOpen = !isOpen">X</button>
+					<game-search class="game-search" v-bind:searched-games="searchedGames"></game-search>	
 				</div>
 			</div>
 		</header>
@@ -27,17 +28,18 @@
 				<h1 class="h1-hero">Welcome to the Internet Game Database</h1>
 				<h2><span class="hero-line-ani">Popular </span>Games Right now</h2>
 			</section>
-			<popular-titles id="popular-games-app" v-bind:game-titles="popularTitles"></popular-titles>
-		<div id="random-games-app">
-			<button v-on:click="getdata">Search For Random Game</button>
-			<game-feed v-bind:game-data="gameData"></game-feed>
-		</div>
-		<div id="game-news">
-			<button v-on:click="getGameNewsData">News</button>
-			<game-news v-bind:game-stuff="gameNews"></game-news>
-		</div>
-	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+			<popular-titles  class="popular-times" id="popular-games-app" v-bind:game-titles="popularTitles"></popular-titles>
+			<div id="game-news">
+					<h1 class="h1-news"><span class="video-game-border">Video Game</span> News</h1>
+				<game-news v-bind:game-stuff="gameNews"></game-news>
+			</div>
+			<div id="random-games-app">
+				<button class="btn" v-on:click="getdata">Search For Random Game</button>
+				<game-feed v-bind:game-data="gameData"></game-feed>
+			</div>
+		</div>	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="dist/js/searchedGamesComponent.js"></script>
@@ -49,7 +51,5 @@
 		<script src="dist/js/random-game.js"></script>	
 		<script src="dist/js/news-ign.js"></script>
 		<script src="dist/js/gameNews.js"></script>
-
-
 	</body>
 </html>

@@ -7,7 +7,7 @@ Vue.component('game-search', {
   },
   template:`
   	<div>
-        <div>
+      <div class="game-searched" v-if="searchedGames">
   			<h1>{{searchedGames.name}}</h1>
   			<img v-for="screenshot in searchedGames.screenshots.slice(0,1)" :src="screenshot.url.replace('t_thumb', 't_screenshot_med')">
   		</div>

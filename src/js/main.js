@@ -7,7 +7,7 @@ var app = new Vue({
 	el: "#search-app",
 	data: {
 		userSearch: "",
-		searchedGames: [],
+		searchedGames: null,
 		isOpen: false,
 	},
 	methods: {

@@ -30,20 +30,39 @@ body {
 /* 2. Content ================================= */
 
 header {
+	
 
 	.header-bar {
 		background-color: $main-color;
 		width: 100%;
+		display: flex;
+		flex-direction: row;
+
+
+		h1 {
+			color: white;
+			margin: 15px 20px 20px 10px;
+			padding: 10px;
+			font-size: 20px;
+			font-family: $font-1;
+
+			span {
+				color: $primary-color;
+				font-size: 40px;
+				font-family: $font-2;
+			}
+		}
 
 		input {
-			margin: 15px 0 0 10%;
+			margin: 30px 20px 30px 10px;
 			border: solid 1px #ccc;
 			padding: 9px 10px 9px 32px;
-			width: 55px;
+			width: 75px;
 			border-radius: 5px;
 			outline: none;
 			background:  #ededed url("https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png") no-repeat 1px center;
 			transition: all .5s;
+			margin-left:auto;
 		}
 
 		input:focus {
@@ -53,12 +72,13 @@ header {
 		}
 
 		.popupBox { 
-			width: 800px;
+			position: fixed;
+			width: 500px;
 			height: 350px;
 			background: $main-color;
-			margin-top: 90px;
-			margin-left: auto;
-    		margin-right: auto;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
     		z-index: 10;
     		-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 			-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -74,10 +94,12 @@ header {
     		}
 
     		img {
-    			padding: 20px;
-    			margin-left: 25%;
-    			width: 50%;
-	    		
+    			padding: 10px;
+				width: 70%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+
     		}
     		    		
 		}
@@ -92,8 +114,11 @@ header {
 
 		.close-button {
 			float: right;
-			padding: 5px;
+
 			z-index: 10;
+			background: none;
+			color: $accent-color;
+			font-size: 20px;
 		}
 
 	
@@ -148,7 +173,7 @@ section {
 	.popular-games-wrapper {
 		display: flex;
 		flex-direction: row;
-		width: 22% * 10; // each game is 25% of window width, and there are 10 games
+		width: 22% * 10;
 		div {
 			width: 10%;
 			z-index: -1;
@@ -156,19 +181,14 @@ section {
 				width: 100%;
 			
 			}
-		}
-
-		// .slideshow {
-		// 	position: relative;
-		// 	width: 10000px;
-		// 	height: 100%;
-		// 	overflow: scroll;
-
-		// 	.slide {
+			img:hover {
 				
-		// 	}
+			}
+			p {
+				text-align: center;	
+			}
+		}
 		
-
 			.game-info-card {
 				font-size: 14px;;
 				min-height: 50px;
@@ -178,7 +198,6 @@ section {
 				color: $main-color;
 				
 			}
-		// }
 	}
 }
 
@@ -187,6 +206,7 @@ section {
 #random-games-app {
 	z-index: -11;
 	button {
+		margin-top: 20px;
 		display: block;
 		margin-left: auto;
     	margin-right: auto;
@@ -195,6 +215,7 @@ section {
 		background: $main-color;
 		color: white;
 		padding: 10px;
+		border: 1px solid #fff;	
 	}
 
 	h1 {
@@ -217,6 +238,75 @@ section {
 
 	}
 }
+
+.news-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 0 auto;
+	padding: 40px 0 30px;
+	max-width: 600px;
+	border-bottom: 1px dashed #777;
+
+	h1 {
+		text-align: center;
+		font-size: 1.2em;
+		margin: 0 auto 10px auto;
+		font-weight: bolder;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	h3 {
+		margin: 0 auto 10px auto;
+		text-align: center;
+	}
+
+	a {
+		margin: auto;
+		color: black;
+		padding: 10px;
+		background: $accent-color;
+		border-radius: 4px;
+		margin-top: 15px;
+		margin-bottom: 10px; 
+	}
+
+	.content-img {
+		width: 50%;
+		margin: auto;
+		
+	}
+}
+
+.h1-news {
+	text-transform: uppercase;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	font-size: 22px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-family: $font-1;
+	z-index: -10;
+	margin-left: 10px;
+
+	.video-game-border {
+		border-bottom: 1.5px solid $accent-color; 
+
+	}
+}
+
+
+.game-searched {
+	h1 {
+		font-weight: 800;
+	} 
+	
+}
+
+
 
 
 
